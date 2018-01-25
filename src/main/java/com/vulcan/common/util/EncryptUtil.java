@@ -6,7 +6,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.SortedMap;
 
-import org.junit.Test;
 
 
 /** 
@@ -41,7 +40,7 @@ public class EncryptUtil {
 	
 	/**
 	 * 创建md5摘要,规则是:按参数名称a-z排序,遇到空值的参数不参加签名。
-	* @param app_key 签名app_key
+	* @param key 签名app_key
 	* @param parameters SortedMap表示的待签名键值对
 	* @param secret 认证
 	* @param charset String表示的字符编码
@@ -68,7 +67,6 @@ public class EncryptUtil {
 	}
 	/**
 	 * 创建md5摘要,规则是:按参数名称a-z排序,遇到空值的参数不参加签名。
-	 * @param app_key 签名app_key
 	 * @param parameters SortedMap表示的待签名键值对
 	 * @param secret 认证
 	 * @param charset String表示的字符编码
@@ -126,11 +124,11 @@ public class EncryptUtil {
 	
 	private static final String hexDigits[] = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f" };
 	
-	@Test
-	public void test01(){
-		String str = "我";
-		
-		String mD5Encode = mD5Encode(str, "utf-8");
-		System.out.println("--------:" + mD5Encode);
-	}
+//	@Test
+//	public void test01(){
+//		String str = "我";
+//
+//		String mD5Encode = mD5Encode(str, "utf-8");
+//		System.out.println("--------:" + mD5Encode);
+//	}
 }
